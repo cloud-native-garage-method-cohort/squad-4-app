@@ -15,7 +15,7 @@ RUN npm ci
 # into the root of the WORKDIR
 COPY . .
 
-# Document that this container exposes something on port 3000
+# Document that this container exposes something on port 8080
 EXPOSE 8080
 
 # Command to use for starting the application
