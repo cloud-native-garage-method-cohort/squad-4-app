@@ -1,6 +1,8 @@
 # Use node Docker image, version 16-alpine
 FROM quay.io/upslopeio/node-alpine
 
+RUN npm install -g http-server
+
 # From the documentation, "The WORKDIR instruction sets the working directory for any
 # RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile"
 WORKDIR /usr/src/app
@@ -15,8 +17,10 @@ RUN npm ci
 # into the root of the WORKDIR
 COPY . .
 
+RUN npm run build
+
 # Document that this container exposes something on port 8080
 EXPOSE 8080
 
 # Command to use for starting the application
-CMD ["npm", "run", "build"]
+CMD ["http-server", "dist" ]
