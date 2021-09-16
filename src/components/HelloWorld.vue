@@ -4,7 +4,7 @@
     <h2>
       Members:
     </h2>
-    <p> Florian Shachter </p>
+    <p> Florian Schächter </p>
     <p> Peter Currie </p>
     <p> Wayne Cabanto </p>
   </div>
