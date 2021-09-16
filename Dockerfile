@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 8080
 
 # Command to use for starting the application
-CMD ["npm", "run", "serve"]
+CMD ["npm", "run", "build"]
