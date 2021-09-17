@@ -5,6 +5,9 @@
       <h2>Members:</h2>
       <p>Florian Schächter, Peter Currie, and Wayne Cabanto</p>
     </div>
+    <div class="button-headers">
+      <Button title="Add a note" type="header"/>
+    </div>
     <div class="notes-container">
       <div v-for="(note, index) in notes" :key="index">
         <Card :title="note.title" :description="note.description" />
@@ -15,10 +18,12 @@
 
 <script>
 import Card from "../components/Card";
+import Button from "../components/Button";
 export default {
   name: "Home",
   components: {
     Card,
+    Button
   },
   props: {
     msg: String,
@@ -47,6 +52,10 @@ export default {
         {
           title: "Mammal",
           description: "A warm-blooded vertebrate animal of a class that is distinguished by the possession of hair or fur, females that secrete milk for the nourishment of the young, and (typically) the birth of live young.",
+        },
+        {
+          title: "Multiverse",
+          description: "The multiverse is a hypothetical group of multiple universes. Together, these universes comprise everything that exists: the entirety of space, time, matter, energy, information, and the physical laws and constants that describe them.",
         },
         {
           title: "Multiverse",
@@ -84,11 +93,17 @@ a {
   width: 85%;
   background-color: #f5f0e1;
   min-height: 400px;
-  margin-top: 100px;
   border-radius: 10px;
 
   /**Flexbox settings */
   display: flex;
   flex-wrap: wrap;
+}
+
+.button-headers {
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 85%;
 }
 </style>
