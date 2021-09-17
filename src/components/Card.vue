@@ -57,4 +57,9 @@ export default {
 .hr {
   width: 50%;
 }
+
+.title-container { 
+    display: flex;
+    flex-direction: row-reverse;
+}
 </style>
