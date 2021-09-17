@@ -42,7 +42,7 @@ export default {
     getNotes() {
       axios
         .get(
-          `https://express-sample-app-squad-4-app.ibmcloud-roks-wgiztgdm-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud/notes`
+          `https://express-sample-app-squad-4-backend.ibmcloud-roks-wgiztgdm-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud/notes`
         )
         .then((response) => {
           console.log("result", response);
